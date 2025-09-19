@@ -18,7 +18,8 @@ document.querySelectorAll(".nav-links a").forEach(link=>{
 
 // Typing effect
 const typingElement = document.querySelector(".typing");
-const texts = ["Software Engineer","Agentic AI Enthusiast","Web Developer","Python Developer"];
+// const texts = ["Software Engineer","Agentic AI Developer","Frontend Web Developer","Passionate Problem Solver"];
+const texts = ["Agentic AI Developer","Frontend Developer","Passionate Problem Solver"];
 let textIndex=0, charIndex=0, typingDelay=150, erasingDelay=100, newTextDelay=1500;
 
 function type(){ if(charIndex<texts[textIndex].length){ typingElement.textContent += texts[textIndex].charAt(charIndex); charIndex++; setTimeout(type,typingDelay); } else{ setTimeout(erase,newTextDelay); } }
