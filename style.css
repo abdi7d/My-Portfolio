@@ -196,4 +196,16 @@ footer {
 }
 
 
+/* Profile views */
+#visitor-count {
+  font-weight: bold;
+  color: #00acee; /* or any color that fits your footer */
+}
+
+#visitor {
+  font-weight: bold;
+  color: #ee00ab;
+  margin-left: 20px;
+}
+
 
