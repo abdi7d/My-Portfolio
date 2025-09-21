@@ -45,15 +45,30 @@ const observer = new IntersectionObserver((entries)=>{
 sections.forEach(section=>observer.observe(section));
 
 
+
+
+
 // Visitor counter using CountAPI
-fetch('https://api.countapi.xyz/hit/abdi-portfolio-website/views')
-  .then(res => res.json())
-  .then(res => {
-    // Make sure the element exists
-    const counterElement = document.getElementById("visitor-count");
-    if (counterElement) counterElement.innerText = res.value;
-  })
-  .catch(err => console.error('Error fetching visitor count:', err));
 
+// Check if the user has already visited
+if (!localStorage.getItem('visited')) {
+  // Increment the counter only once
+  fetch('https://api.countapi.xyz/hit/abdi-portfolio-website/views')
+    .then(res => res.json())
+    .then(res => {
+      const counterElement = document.getElementById("visitor-count");
+      if (counterElement) counterElement.innerText = res.value;
+    })
+    .catch(err => console.error('Error fetching visitor count:', err));
 
-
+  // Mark this user as visited
+  localStorage.setItem('visited', 'true');
+} else {
+  // Just fetch current count without incrementing
+  fetch('https://api.countapi.xyz/get/abdi-portfolio-website/views')
+    .then(res => res.json())
+    .then(res => {
+      const counterElement = document.getElementById("visitor-count");
+      if (counterElement) counterElement.innerText = res.value;
+    });
+}
