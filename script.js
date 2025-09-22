@@ -8,6 +8,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e){
   .catch(err=>{ Swal.fire({ icon:"error", title:"Oops...", text:"Failed to send message." }); console.error(err); });
 });
 
+
 // Smooth scroll for navbar links
 document.querySelectorAll(".nav-links a").forEach(link=>{
   link.addEventListener("click", e=>{
@@ -35,14 +36,78 @@ themeBtn.addEventListener("click", ()=>{
 });
 if(localStorage.getItem("theme")==="dark"){ document.body.classList.add("dark"); themeBtn.innerHTML='<i class="fas fa-sun"></i>'; }
 
-// Section reveal on scroll
+
+
+
+/* =========================
+   Section reveal & active nav link
+   ========================= */
 const sections = document.querySelectorAll(".section");
-const observer = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){ entry.target.classList.add("visible"); }
+const navLinks = document.querySelectorAll(".nav-link");
+
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      // set active nav
+      const id = entry.target.getAttribute("id");
+      navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === `#${id}`));
+    }
   });
-},{ threshold:0.2 });
-sections.forEach(section=>observer.observe(section));
+}, { threshold: 0.25 });
+
+sections.forEach(s => io.observe(s));
+
+/* Smooth scrolling for internal links */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener("click", function (e) {
+    const href = this.getAttribute("href");
+    if (!href || href === "#") return;
+    e.preventDefault();
+    const el = document.querySelector(href);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+    // close mobile nav if open
+    document.getElementById("primary-nav")?.classList.remove("show");
+    document.getElementById("navToggle")?.setAttribute("aria-expanded", "false");
+  });
+});
+
+
+
+/* =========================
+   Project filter + search
+   ========================= */
+const filterBtns = document.querySelectorAll(".filter-btn");
+const projectsGrid = document.getElementById("projectsGrid");
+const projectSearch = document.getElementById("projectSearch");
+
+function filterProjects(filter, searchTerm="") {
+  const cards = projectsGrid ? Array.from(projectsGrid.querySelectorAll(".project-card")) : [];
+  cards.forEach(card => {
+    const type = card.dataset.type || "all";
+    const title = (card.dataset.title || card.querySelector("h3")?.innerText || "").toLowerCase();
+    const matchesFilter = filter === "all" || type === filter;
+    const matchesSearch = !searchTerm || title.includes(searchTerm.toLowerCase());
+    card.style.display = (matchesFilter && matchesSearch) ? "" : "none";
+  });
+}
+
+filterBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    filterBtns.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    const filter = btn.dataset.filter;
+    filterProjects(filter, projectSearch?.value || "");
+  });
+});
+
+projectSearch && projectSearch.addEventListener("input", (e) => {
+  const active = document.querySelector(".filter-btn.active")?.dataset.filter || "all";
+  filterProjects(active, e.target.value);
+});
+
+
+
 
 
 
