@@ -223,10 +223,11 @@ header { position: sticky; top:0; z-index:100; }
 .quote {
   max-width: 600px;       /* keeps quote from stretching too wide */
   margin: 40px auto;      /* centers the quote */
-  padding: 20px 30px;
+  padding: 10px 30px;
   border-left: 5px solid #4CAF50; /* green vertical line */
+  border-bottom: 5px solid #4CAF50;
   background-color: #1e1e1e;      /* light background */
-  border-radius: 10px;
+  border-radius: 50px;
   font-family: 'Georgia', serif;
   font-style: italic;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
