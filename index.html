@@ -1,77 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abdi Dabala | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <!--  favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png" />
-    <!-- <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32" /> -->
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+    <!-- SEO -->
+  <meta name="description" content="Abdi Dabala — AI Developer, Agentic AI Developer & Software Engineer. Portfolio showcasing AI projects, RAG chatbots, web work and open-source contributions." />
+  <meta name="keywords" content="Abdi Dabala, AI Developer, Agentic AI, LangChain, RAG, Portfolio, Software Engineer" />
+  <meta name="author" content="Abdi Dabala" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Abdi Dabala | AI Developer & Software Engineer" />
+  <meta property="og:description" content="AI Developer, Agentic AI Developer, and Software Engineer. Explore projects, skills and ways to collaborate." />
+  <meta property="og:image" content="images/img20250915_08270565.jpg" />
+  <meta property="og:url" content="https://yourwebsite.com" />
+
+
+
+  <!--  favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+
+  <!-- Icons & libs -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="" crossorigin="anonymous" />
+
+
+
+  <!-- EmailJS & SweetAlert (kept from original)
+  <script src="https://cdn.emailjs.com/dist/email.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script> -->
+
+
+     <!-- EmailJS & SweetAlert (kept from original) -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+      <!-- Accessibility: theme preference -->
+    <meta name="color-scheme" content="light dark" />
   </head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <body>
     <!-- Navbar -->
     <!-- Navbar -->
-    <header>
-      <nav class="navbar">
-        <!-- <div class="logo">Abdi<span>.</span></div> -->
-        <div class="logo">
-          <img src="images/logo.png" alt="Logo" class="logo-img" />
-          <span>Abdi</span>
-        </div>
+<!-- NAVBAR -->
+  <header class="site-header" role="banner">
+    <nav class="navbar container" role="navigation" aria-label="Main Navigation">
+      <a class="logo" href="#home">
+        <img src="images/logo.png" alt="Abdi logo" class="logo-img" loading="lazy" />
+        <span class="logo-text">Abdi</span>
+      </a>
 
-        <ul class="nav-links">
-          <li>
-            <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
-          </li>
-          <li>
-            <a href="#about"><i class="fas fa-user"></i> About</a>
-          </li>
-          <li>
-            <a href="#projects"><i class="fas fa-folder-open"></i> Projects</a>
-          </li>
-          <li>
-            <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
-          </li>
-        </ul>
+      <button id="navToggle" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
 
-        <div class="theme-toggle">
-          <button id="themeBtn"><i class="fas fa-moon"></i></button>
-        </div>
-      </nav>
-    </header>
+      <ul id="primary-nav" class="nav-links">
+        <li><a href="#home" class="nav-link active"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+        <li><a href="#about" class="nav-link"><i class="fas fa-user" aria-hidden="true"></i> About</a></li>
+        <li><a href="#skills" class="nav-link"><i class="fas fa-laptop-code" aria-hidden="true"></i> Skills</a></li>
+        <li><a href="#services" class="nav-link"><i class="fas fa-briefcase" aria-hidden="true"></i> Services</a></li>
+        <li><a href="#projects" class="nav-link"><i class="fas fa-folder-open" aria-hidden="true"></i> Projects</a></li>
+        <li><a href="#contact" class="nav-link"><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="themeBtn" class="theme-btn" aria-pressed="false" title="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <a class="cta-resume btn" href="assets/resume.pdf" download>📄 Resume</a>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Sections -->
-    <!--Home-->
+
+    <!-- HERO -->
     <section id="home" class="section hero">
-      <img
-        src="images/img20250915_08270565.jpg"
-        alt="Profile Picture"
-        class="profile-img"
-      />
+      <img src="images/img20250915_08270565.jpg" alt="Profile Picture" class="profile-img" />
+
       <div class="hero-text">
-        <!-- <h1>Hi , I'm <span>Abdi Dabala</span></h1> -->
         <h1>Hi there 👋, I'm <span>Abdi Dabala</span></h1>
-        <p>I am <span class="typing"></span></p>
-        <a href="assets/resume.pdf" class="btn" download>Download Resume</a>
+        <p>I am <span class="typing" aria-live="polite"></span></p>
+        <!-- <a href="assets/resume.pdf" class="btn" download>📄 Download Resume</a> -->
         <!-- <p id="visitor">Views: <span id="visitor-count">0</span></p> -->
+        
+        <p class="hero-cta">
+            <a href="assets/resume.pdf" class="btn" download>📄 Download Resume</a>
+            <a href="#contact" class="btn ghost">Let's talk</a>
+        </p>
+
+
         <blockquote class="quote">
             <p class="quote-text">The best way to predict the future is to create it!</p>
             <footer class="quote-author">— Abraham Lincoln</footer>
         </blockquote>
+
+
+        
+
       </div>
       <!-- Scroll Down Button -->
       <!-- <a href="#about" class="scroll-btn scroll-down-btn"><i class="fas fa-arrow-down"></i></a> -->
       <a href="#about" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
-
     </section>
+
+
+
+
+
+
+
+
+
+
+
 
     <!--About-->
     <section id="about" class="section about-section">
@@ -87,8 +170,55 @@
       <!-- <a href="#projects" class="scroll-down"><i class="fas fa-chevron-down"></i></a> -->
     </section>
 
+
+
+
+
+      <!-- SKILLS -->
+    <section id="skills" class="section skills-section container">
+      <h2>Skills</h2>
+      <ul class="skills-list" aria-label="Main technical skills">
+        <li><i class="fas fa-code"></i> Python, LangChain, Gradio</li>
+        <li><i class="fas fa-brain"></i> HuggingFace, Chroma</li>
+        <li><i class="fas fa-tools"></i> UI/UX Design, Debugging</li>
+        <li><i class="fas fa-cogs"></i> Full-stack Development</li>
+      </ul>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section services-section container">
+      <h2>Services</h2>
+      <div class="services">
+        <div class="service-card" role="article">
+          <i class="fas fa-robot" aria-hidden="true"></i>
+          <h3>AI Development</h3>
+          <p>RAG assistants, custom LLM pipelines, and agentic systems for real tasks.</p>
+        </div>
+        <div class="service-card" role="article">
+          <i class="fas fa-code" aria-hidden="true"></i>
+          <h3>Web & Full-stack</h3>
+          <p>Responsive frontends, backend APIs, deployment and CI best practices.</p>
+        </div>
+        <div class="service-card" role="article">
+          <i class="fas fa-users" aria-hidden="true"></i>
+          <h3>Open-source & Collaboration</h3>
+          <p>Project contributions, architecture reviews, and mentoring.</p>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
     <!--Projects-->
-    <section id="projects" class="section projects-section">
+    <!-- <section id="projects" class="section projects-section">
       <h2>Projects</h2>
       <div class="projects">
         <div class="project-card">
@@ -102,7 +232,7 @@
             href="https://github.com/abdi7d/Ready-Tensor-Publication-Explorer-RAG-Chatbot"
             target="_blank"
             >View Project</a>
-        </div>
+        </div> -->
         <!-- <div class="project-card">
           <img src="assets/images/project1.png" alt="Café Management System" />
           <h3>Café Management System</h3>
@@ -127,9 +257,46 @@
             >View Project</a
           >
         </div> -->
-      </div>
+      <!-- </div> -->
       <!-- <a href="#contact" class="scroll-down"><i class="fas fa-chevron-down"></i></a> -->
+    <!-- </section> -->
+
+
+    
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects-section container">
+      <h2>Projects</h2>
+
+      <div class="project-controls">
+        <div class="filter-buttons" role="tablist" aria-label="Project filters">
+          <button class="filter-btn active" data-filter="all" role="tab">All</button>
+          <button class="filter-btn" data-filter="ai" role="tab">AI</button>
+          <button class="filter-btn" data-filter="web" role="tab">Web</button>
+        </div>
+        <input id="projectSearch" class="project-search" type="search" placeholder="Search projects..." aria-label="Search projects" />
+      </div>
+
+      <div class="projects" id="projectsGrid" aria-live="polite">
+        <!-- Example Project: RAG Chatbot -->
+        <article class="project-card" data-type="ai" data-title="RAG Chatbot">
+          <img src="images/RAG chatbot image.jpg" alt="RAG Chatbot screenshot" loading="lazy" />
+          <div class="overlay">
+            <h3>RAG Chatbot Project</h3>
+            <p>A RAG-based chatbot to explore publications using AI and LLM technologies.</p>
+            <div class="project-links">
+              <a href="https://github.com/abdi7d/Ready-Tensor-Publication-Explorer-RAG-Chatbot" target="_blank" rel="noopener" class="btn small">View Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Add more project-card articles here, matching data-type attributes -->
+      </div>
     </section>
+
+
+
+
 
     <!--Contact-->
     <section id="contact" class="section contact-section">
