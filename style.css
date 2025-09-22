@@ -114,7 +114,7 @@ html, body {
 
 /* HERO */
 .hero { gap: 2rem; flex-direction: column-reverse; }
-.hero .profile-img { width: 250px; border-radius:20px; transition: transform 0.5s; }
+.hero .profile-img { max-width: 250px; border-radius:20px; transition: transform 0.5s; }
 .hero .profile-img:hover { transform: scale(1.05); }
 .hero-text h1 { font-size:2rem; }
 .hero-text h1 span { color:#4c7fff; }
