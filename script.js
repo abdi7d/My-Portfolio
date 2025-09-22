@@ -74,6 +74,24 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
 
 
+
+// Navbar toggle for mobile
+const navToggle = document.getElementById("navToggle");
+const navLinks1 = document.getElementById("primary-nav");
+
+navToggle.addEventListener("click", () => {
+  const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+  navToggle.setAttribute("aria-expanded", !isExpanded);
+  navLinks1.classList.toggle("show");
+
+  // toggle between bars and X icon
+  // const icon = navToggle.querySelector("i");
+  // icon.classList.toggle("fa-bars");
+  // icon.classList.toggle("fa-times");
+});
+
+
+
 /* =========================
    Project filter + search
    ========================= */
@@ -105,6 +123,11 @@ projectSearch && projectSearch.addEventListener("input", (e) => {
   const active = document.querySelector(".filter-btn.active")?.dataset.filter || "all";
   filterProjects(active, e.target.value);
 });
+
+
+
+
+
 
 
 
