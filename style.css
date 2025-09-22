@@ -152,6 +152,10 @@ html, body {
 }
 .section.visible { opacity:1; transform: translateY(0); }
 
+/* SECTIONS base */
+.section{padding:3rem 0}
+.section h2{font-size:1.4rem;margin:0 0 1rem;color:var(--accent)}
+.container .section p{max-width:76ch;margin:0 auto}
 
 
 /* HERO */
@@ -226,17 +230,23 @@ html, body {
 .project-search{padding:0.45rem 0.6rem;border-radius:10px;border:1px solid rgba(0,0,0,0.08);min-width:200px}
 
 /* Projects grid */
-.projects{display:flex;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin-top:1rem}
+.projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin-top:1rem}
 .project-card{background:var(--surface);border-radius:12px;overflow:hidden;position:relative;box-shadow:0 8px 24px var(--shadow)}
-.project-card img{width:100%;height:250px;object-fit:cover;display:block;transition:transform .35s}
+.project-card img{width:100%;height:180px;object-fit:cover;display:block;transition:transform .35s}
 .project-card .overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.6));color:#fff;padding:1rem;transform:translateY(100%);transition:transform .28s}
 .project-card:hover img{transform:scale(1.05)}
 .project-card:hover .overlay{transform:translateY(0)}
 .project-links{margin-top:0.6rem}
 
 
-
-
+.projects-section {
+  display: block;       /* allow grid to behave normally */
+  padding: 3rem 2rem;
+  text-align: left;     /* optional, depends on your design */
+  max-width: var(--container);
+  margin: 0 auto;       /*center the section*/
+  
+}
 
 
 
