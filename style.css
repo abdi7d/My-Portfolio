@@ -112,8 +112,6 @@ html, body {
 
 
 
-
-
 /* HERO */
 .hero { gap: 2rem; flex-direction: column-reverse; }
 .hero .profile-img { width: 250px; border-radius:20px; transition: transform 0.5s; }
@@ -124,8 +122,8 @@ html, body {
 
 
 /* Buttons */
-.btn{display:inline-block;padding:0.6rem 1rem;border-radius:10px;background:var(--primary-color);color:#fff;text-decoration:none;font-weight:700}
-.btn:hover { background:#e8436cfd; transform: scale(1.05); }
+.btn{display:inline-block;padding:0.4rem 1rem;border-radius:10px;background:var(--primary-color);color:#fff;text-decoration:none;font-weight:700}
+.btn:hover { background:#43e8ddfd; transform: scale(1.05); }
 .btn.ghost{background:transparent;border:1px solid var(--primary-color);color:var(--primary-color)}
 .btn.small{padding:0.4rem 0.6rem;font-size:0.9rem}
 
