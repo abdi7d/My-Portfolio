@@ -113,13 +113,15 @@ header { position: sticky; top:0; z-index:100; }
 
 
 /* Footer */
-/* footer { text-align:center; padding:1rem; background: tomato; color:#fff; } */
-footer {
+/* #footer { text-align:center; padding:1rem; background: tomato; color:#fff; }  */
+#footer {
   text-align: center;
   padding: 1rem;
-  background: linear-gradient(90deg, #4643e8, #e85f43); /* Gradient effect */
+  background: linear-gradient(90deg, #4643e8, #e85f43); /* Gradient effect*/
+  /* background: linear-gradient(90deg,  red,orange,yellow,green,blue,indigo,violet);  */
+
   color: #ffffff;
-}
+} 
 
 
 
@@ -196,6 +198,10 @@ footer {
 }
 
 
+
+
+
+
 /* Profile views */
 #visitor-count {
   font-weight: bold;
@@ -208,4 +214,35 @@ footer {
   margin-left: 20px;
 }
 
+
+
+
+
+
+/* Quote */
+.quote {
+  max-width: 600px;       /* keeps quote from stretching too wide */
+  margin: 40px auto;      /* centers the quote */
+  padding: 20px 30px;
+  border-left: 5px solid #4CAF50; /* green vertical line */
+  background-color: #1e1e1e;      /* light background */
+  border-radius: 10px;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.quote-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0 0 10px 0;
+  color: #00acee;
+}
+
+.quote-author {
+  text-align: right;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #00008B;
+}
 
