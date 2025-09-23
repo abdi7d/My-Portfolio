@@ -74,7 +74,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
 
 
-
 // Navbar toggle for mobile
 const navToggle = document.getElementById("navToggle");
 const navLinks1 = document.getElementById("primary-nav");
