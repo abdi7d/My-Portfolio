@@ -402,7 +402,7 @@ html, body {
   margin: 40px auto;      centers the quote
   padding: 10px 30px;
   border-left: 5px solid #4CAF50; green vertical line
-  border-bottom: 5px solid #4CAF50;
+  border-bottom: 5px solid #4CAF50; horizontal green line
   background-color: #1e1e1e;      light background
   border-radius: 50px;
   font-family: 'Georgia', serif;
