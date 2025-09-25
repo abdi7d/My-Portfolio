@@ -424,7 +424,7 @@ html, body {
   color: #ee00ab;
 } */
 
-.quote{margin-top:1.25rem;padding:1rem;border-radius:14px;background:linear-gradient(90deg, rgba(76,127,255,0.06), rgba(148,76,255,0.04));border-left:3px solid var(--primary)}
+.quote{margin-top:1.25rem;padding:1rem;border-radius:14px;background:linear-gradient(90deg, rgba(76,127,255,0.06), rgba(148,76,255,0.04)); border-left:3px solid var(--primary); border-bottom:3px solid var(var(--primary))}
 .quote-text{margin:0;color:var(--text);font-style:italic}
 .quote-author{display:block;margin-top:0.55rem;color:var(--muted);font-weight:700;text-align:right}
 
