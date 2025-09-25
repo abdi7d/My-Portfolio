@@ -141,7 +141,7 @@ html, body {
 /* Nav actions */
 .nav-actions{display:flex;align-items:center;gap:0.6rem}
 .theme-btn{background:none;border:0;cursor:pointer;padding:0.5rem;border-radius:8px;font-size:1.05rem}
-.cta-resume.btn{display:inline-block;padding:0.5rem 0.9rem;background:var(--primary);color:#fff;border-radius:8px;text-decoration:none;font-weight:700}
+.cta-resume.btn{display:inline-block;padding:0.5rem 0.9rem;background:var(--primary);color:#fff;border-radius:8px;text-decoration:none;font-weight:700 ; margin-right: 20px}
 
 
 
@@ -176,7 +176,7 @@ html, body {
 
 
 /* HERO */
-.hero { gap: 2rem; flex-direction: column-reverse; }
+.hero { display:flex; gap: 2rem; flex-direction: column-reverse; margin-top: -65px;}
 .hero .profile-img { max-width: 250px; border-radius:20px; transition: transform 0.5s; }
 .hero .profile-img:hover { transform: scale(1.05); }
 .hero-text h1 { font-size:2rem; }
@@ -338,7 +338,7 @@ html, body {
 
 .scroll-down {
   position: absolute;      /* position relative to section */
-  bottom: 20px;            /* 20px from the bottom of section */
+  bottom: 55px;            /* 55px from the bottom of section */
   font-size: 2rem;         /* size of arrow */
   cursor: pointer;         /* pointer on hover */
   animation: bounce 2s infinite; /* bounce animation */
