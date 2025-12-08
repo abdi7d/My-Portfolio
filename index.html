@@ -127,6 +127,12 @@
               ><i class="fas fa-folder-open" aria-hidden="true"></i> Projects</a
             >
           </li>
+
+          <li>
+            <a href="#achievements" class="nav-link">
+              <i class="fas fa-trophy" aria-hidden="true"></i> Achievements
+            </a>
+          </li>
           <li>
             <a href="#contact" class="nav-link"
               ><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a
@@ -144,7 +150,9 @@
             <i class="fas fa-moon"></i>
           </button>
           <!-- <a class="cta-resume btn" href="assets/Abdi Dabala CV.PDF" download>📄 CV</a> -->
-          <a class="cta-resume btn" href="assets/Abdi Dabala Yadata Resume.pdf">📄 Resume</a>
+          <a class="cta-resume btn" href="assets/Abdi Dabala Yadata Resume.pdf"
+            >📄 Resume</a
+          >
         </div>
       </nav>
     </header>
@@ -331,10 +339,13 @@
             </div>
           </div>
         </article>
-               
+
         <!-- AI Project: Web Search AI Agent  -->
         <article
-          class="project-card" data-type="ai" data-title="Web-Search-AI-Agent">
+          class="project-card"
+          data-type="ai"
+          data-title="Web-Search-AI-Agent"
+        >
           <img
             src="images/Web Search AI Agent.png"
             alt="Web Search AI Agent"
@@ -342,7 +353,11 @@
           />
           <div class="overlay">
             <h3>Web Search AI Agent</h3>
-            <p> This project is an AI-powered web search agent that combines Tavily search with Google Gemini LLM to provide summarized, accurate answers to user queries.</p>
+            <p>
+              This project is an AI-powered web search agent that combines
+              Tavily search with Google Gemini LLM to provide summarized,
+              accurate answers to user queries.
+            </p>
             <div class="project-links">
               <a
                 href="https://github.com/abdi7d/Web-Search-AI-Agent"
@@ -362,7 +377,6 @@
             </div>
           </div>
         </article>
-
 
         <!-- Web Project: Haile Fida - The Legendary -->
         <article
@@ -400,9 +414,175 @@
             </div>
           </div>
         </article>
- 
 
         <!-- I will Add more project-card articles here, matching data-type attributes -->
+      </div>
+    </section>
+
+    <!-- Achievements / Certifications -->
+    <section id="achievements" class="section achievements-section container">
+      <h2>Achievements & Certifications</h2>
+
+      <div class="achievement-controls">
+        <div
+          class="filter-buttons"
+          role="tablist"
+          aria-label="Achievement filters"
+        >
+          <button class="filter-btn active" data-filter="all" role="tab">
+            All
+          </button>
+          <button class="filter-btn" data-filter="ai" role="tab">AI</button>
+          <button class="filter-btn" data-filter="web" role="tab">Web</button>
+          <!-- <button class="filter-btn" data-filter="cert" role="tab"> Certificates </button> -->
+          <button class="filter-btn" data-filter="cert" role="tab"> Leadership </button>
+          <button class="filter-btn" data-filter="cert" role="tab"> Entrepreneurship </button>
+        </div>
+        <input
+          id="achievementSearch" class="achievement-search" type="search" placeholder="Search achievements..." aria-label="Search achievements"/>
+      </div>
+
+      <div class="achievements-grid" id="achievementsGrid" aria-live="polite">
+        <!-- Achievement 1: Agentic AI Certificate -->
+        <article
+          class="achievement-card"
+          data-type="ai"
+          data-title="AI Certificate"
+        >
+          <img
+            src="images/agentic-ai-cert.jpg"
+            alt="Agentic AI Certificate"
+            loading="lazy"
+          />
+          <div class="overlay">
+            <h3>Agentic AI Certificate</h3>
+            <p>
+              Completed a comprehensive course on Agentic AI development and
+              deployment.
+            </p>
+            <div class="achievement-links">
+              <a
+                href="https://www.example.com/certificate-link"
+                target="_blank"
+                rel="noopener"
+                class="btn small"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+        </article>
+
+        <!-- Achievement 2: Python & Data Science Bootcamp -->
+        <article
+          class="achievement-card"
+          data-type="ai"
+          data-title="Python Data Science Bootcamp"
+        >
+          <img
+            src="assets/Certifications/Data Science Certificate.png"
+            alt="Python & Data Science Certificate"
+            loading="lazy"
+          />
+          <div class="overlay">
+            <h3>Python & Data Science Bootcamp</h3>
+            <p>
+              Completed a bootcamp covering Python, data preprocessing, machine
+              learning, and advanced modeling.
+            </p>
+            <div class="achievement-links">
+              <a
+                href="https://drive.google.com/file/d/1YrvQAT5keSMSU0InEuvZOOI7ptyr6arh/view?usp=sharing"
+                target="_blank"
+                rel="noopener"
+                class="btn small"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+        </article>
+
+            <!-- Achievement 3: What is Generative AI -->
+        <article
+          class="achievement-card"
+          data-type="ai"
+          data-title="AI Certificate"
+        >
+          <img
+            src="assets/Certifications/CertificateOfCompletion_What Is Generative AI-1-1.png"
+            alt="Generative AI Certificate"
+            loading="lazy"
+          />
+          <div class="overlay">
+            <h3>What is Generative AI?</h3>
+            <p>
+             Completed a comprehensive course on Generative AI concepts, models, and applications.
+            </p>
+            <div class="achievement-links">
+              <a
+                href="https://www.linkedin.com/learning/certificates/cbd604365e4a065a9e73771ce9c2c2bb7576aab82fa1cba5a499960dbc4446b4?trk=share_certificate"
+                target="_blank"
+                rel="noopener"
+                class="btn small"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+        </article>
+        <article
+          class="achievement-card"
+          data-type="ai"
+          data-title="AI Certificate"
+        >
+          <img
+            src="assets/Certifications/CertificateOfCompletion_What Is Generative AI-2.png"
+            alt="Generative AI Certificate"
+            loading="lazy"
+          />
+          <div class="overlay">
+            <h3>Introduction to Generative AI</h3>
+            <p>
+             Completed a comprehensive course on Generative AI concepts, models, and applications.
+            </p>
+            <div class="achievement-links">
+              <a
+                href="https://www.linkedin.com/learning/certificates/f2883eccd22fc62f858ace6504e3eacf6d0f68ba3ea49e054b219ce7aea460ea?trk=share_certificate"
+                target="_blank"
+                rel="noopener"
+                class="btn small"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+        </article>
+        <!-- Achievement 3: Frontend Development Certificate -->
+        <!-- <article
+          class="achievement-card"
+          data-type="web"
+          data-title="Frontend Development Certificate"
+        >
+          <img
+            src="images/frontend-cert.jpg"
+            alt="Frontend Development Certificate"
+            loading="lazy"
+          />
+          <div class="overlay">
+            <h3>Frontend Development Certificate</h3>
+            <p>
+              Completed a course on modern frontend development using HTML, CSS,
+              and JavaScript.
+            </p>
+            <div class="achievement-links">
+              <a
+                href="https://www.example.com/certificate-link"
+                target="_blank"
+                rel="noopener"
+                class="btn small"
+                >View Certificate</a>
+            </div>
+          </div>
+        </article> -->
+
+        <!-- I will Add more achievement-card articles as needed -->
       </div>
     </section>
 
