@@ -159,3 +159,63 @@ if (!localStorage.getItem('visited')) {
       if (counterElement) counterElement.innerText = res.value;
     });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ===== Filter Achievements =====
+const filterButtons = document.querySelectorAll('.filter-btn');
+const achievementCards = document.querySelectorAll('.achievement-card');
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Remove active class from all buttons
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    const filter = button.getAttribute('data-filter');
+
+    achievementCards.forEach(card => {
+      const type = card.getAttribute('data-type');
+      if (filter === 'all' || filter === type) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+
+// ===== Search Achievements =====
+const searchInput = document.getElementById('achievementSearch');
+
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.toLowerCase();
+
+  achievementCards.forEach(card => {
+    const title = card.getAttribute('data-title').toLowerCase();
+    if (title.includes(query)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+});
